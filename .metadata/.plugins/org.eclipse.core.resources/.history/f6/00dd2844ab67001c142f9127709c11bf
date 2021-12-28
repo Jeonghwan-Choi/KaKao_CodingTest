@@ -1,0 +1,54 @@
+package com.Cote;
+
+import java.util.*;
+import java.util.stream.Collectors;
+
+
+public class String_Compression {
+
+	public static void main(String[] args) {
+		String s = "abcabcabcabcdededededede";
+		int answer = 0;
+		int minCount = 0;
+		ArrayList<String> list = new ArrayList<>();
+
+		for(int i=0;i<=s.length()/2;i++) {
+			
+			if(i!=0) {
+				if(s.substring(0,i).equals(s.substring(i,i*2))) {
+			
+					list.clear();
+					
+					for(int j=0;j<=s.length()-i;j+=i) {
+						
+//							System.out.println(j);
+//							System.out.println(s.substring(j,j+i));
+							list.add(s.substring(j,j+i));
+						
+					}
+					
+					  
+					System.out.println("원본:"+list);
+//					
+//					System.out.println(s.substring(0,i));
+//					System.out.println(s.substring(i,i*2));
+//					System.out.println("===========ok"+i);
+				}
+			}	
+			
+
+		}
+//		List<String> newList = list.stream().distinct().collect(Collectors.toList());
+//
+//		System.out.println("중복제거 된 배열 :"+newList);
+//		for(int i=0;i<=list.size();i++) {
+//			
+//		}
+
+		
+
+
+		System.out.println(answer);
+	}
+
+}

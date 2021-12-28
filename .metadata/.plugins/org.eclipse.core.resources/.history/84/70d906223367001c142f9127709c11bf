@@ -1,0 +1,37 @@
+package com.Cote;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("?");
+		
+		String new_id = "...!@BaT#*..y.abcdefghijklm";
+
+		String answer = "";
+
+		String[] puncts = { "-", "_", ".", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "=", "+", "[", "]",
+				"{", "}", ":", "?", ",", "<", ">", "/" };
+
+		String[] punctArr = { "-", "_", "." }; // 특정 특수문자 Arr
+		
+		 for (String item : puncts) {
+		      if (new_id.contains(item)) {
+		      } else {
+		        if (item.equals("*") || item.equals("+") || item.equals("$") || item.equals("|")) {
+		          item = "[" + item + "]";
+		        }
+		        if (item.equals("(") || item.equals(")") || item.equals("{") || item.equals("}")
+		            || item.equals("^") || item.equals("[") || item.equals("]")) {
+		          item = "\\" + item;
+		        }
+		        answer = new_id.replaceAll(item, "");
+		      }
+		    }
+
+		answer = new_id.toLowerCase();
+		System.out.println(answer);
+
+	}
+
+}

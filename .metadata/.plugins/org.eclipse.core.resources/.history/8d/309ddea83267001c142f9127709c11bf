@@ -1,0 +1,24 @@
+package com.Cote;
+
+public class Solution {
+	
+	 public static String solution(String new_id) {
+	        String answer = "";
+	        
+	        String[] puncts = {"-", "_", ".", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(",                    ")", "=","+", "[", "]", "{", "}", ":", "?", ",", "<", ">", "/"};
+	        
+	        String[] punctArr = {"-", "_", "."}; // 특정 특수문자 Arr
+	  
+	        answer = new_id.toLowerCase();
+	        return answer;
+	    }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("hello world");
+		String new_id = "...!@BaT#*..y.abcdefghijklm";
+		solution(new_id);
+		
+	}
+
+}

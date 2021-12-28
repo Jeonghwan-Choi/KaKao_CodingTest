@@ -1,0 +1,71 @@
+package com.Cote;
+
+import java.util.*;
+import java.util.stream.Collectors;
+
+
+public class String_Compression {
+
+	public static void main(String[] args) {
+		String s = "abcabcabcabcdededededede";
+		int answer = 0;
+		int minCount = 1;
+		int startPosition = 0;
+		ArrayList<String> list = new ArrayList<>();
+
+		for(int i=0;i<=s.length()/2;i++) {
+			
+			if(i!=0) {
+				if(s.substring(0,i).equals(s.substring(i,i*2))) {
+			
+					list.clear();
+					
+					for(int j=0;j<=s.length()-i;j+=i) {
+						
+//							System.out.println(j);
+//							System.out.println(s.substring(j,j+i));
+							list.add(s.substring(j,j+i));
+						
+					}
+					
+					  
+					System.out.println("원본:"+list);
+//					List<String> newList = list.stream().distinct().collect(Collectors.toList());
+//
+//					System.out.println("중복제거 된 배열 :"+newList);
+					for(int t=list.size()-1;t>=1;t--) {
+						
+						if(list.get(t).equals(list.get(t-1))) {
+							System.out.println(t);
+							minCount =  minCount + 1;
+							System.out.println("minCount:" + minCount);
+							System.out.println(t+"번째 진행:"+list);
+							list.remove(t);
+							
+						}else {
+							
+							list.set(t , minCount+list.get(t));
+							startPosition = t;
+							minCount = 0;
+							
+						}
+					}
+					System.out.println("변경된 배열:"+list);
+//					System.out.println(s.substring(0,i));
+//					System.out.println(s.substring(i,i*2));
+//					System.out.println("===========ok"+i);
+				}
+			}	
+			
+
+		}
+
+
+
+		
+
+
+		System.out.println(answer);
+	}
+
+}

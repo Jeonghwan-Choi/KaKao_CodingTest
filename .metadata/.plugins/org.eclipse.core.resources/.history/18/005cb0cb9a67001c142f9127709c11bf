@@ -1,0 +1,17 @@
+package com.Cote;
+
+public class Card_String_Number {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "";
+		int answer = 0;
+		String numbers[] = {"zero","one","two","three","four","five","six","seven","eight","nine"};
+		
+		System.out.println(answer);
+		
+		
+
+	}
+
+}
