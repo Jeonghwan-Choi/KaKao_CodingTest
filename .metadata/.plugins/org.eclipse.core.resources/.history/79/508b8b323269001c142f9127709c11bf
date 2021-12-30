@@ -1,0 +1,22 @@
+package com.Cote;
+
+public class KaKao_ex1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Marry Jane Watson-Parker
+		//<mjwatsonpa@example.com>
+		String S = "Marry Jane Watson-Parker";
+		String C = "";
+		
+		String temp = S.toLowerCase();
+		
+		System.out.println(temp);
+		
+		
+		
+
+	}
+
+}

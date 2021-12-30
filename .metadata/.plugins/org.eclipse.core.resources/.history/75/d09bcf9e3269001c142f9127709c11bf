@@ -1,0 +1,25 @@
+package com.Cote;
+
+public class KaKao_ex1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Marry Jane Watson-Parker
+		//<mjwatsonpa@example.com>
+		String S = "Marry Jane Watson-Parker";
+		String C = "";
+		
+		String temp = S.toLowerCase();
+		String RAtemp = temp.replaceAll("-", "");
+		String[] SPtemp = RAtemp.split(" ");
+		
+		System.out.println(temp);//소문자
+		System.out.println(RAtemp);//하이픈제거
+		System.out.println(SPtemp.length);//스플릿 개
+		
+		
+
+	}
+
+}
